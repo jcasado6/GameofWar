@@ -44,14 +44,21 @@ console.log(player2)
 
 
 // function compare() {
+function compare() {
 
   card1 = player1[player1.length -1];
-  player1 = player1.pop[player1.length -1];
-  console.log(card1);
-  console.log(player1)
-// }
-  // card2 = player2[player2.length -1];
-  // player2.shift[player2.length -1];
+  // player1 = player1.pop[player1.length -1];
+  // console.log(card1);
+  // console.log(player1)
+  card2 =player2[player2.length -1];
+  // player2 = player2.pop
+  if (card1.values > card2.values) {
+    console.log('Player 1 Wins!')
+  } else if (card1.values < card2.values) {
+    console.log('Player 2 Wins!')
+  }
+}
+compare()
 
 
 
