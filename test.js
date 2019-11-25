@@ -120,3 +120,31 @@ document.addEventListener('Player One Ready', war.passCards(playerTwoDeck))
 // war.passCards(playerOneDeck)
 // war.passCards(playerTwoDeck)
 console.log(deck.card) //just so I can see
+
+playGame(); {
+  for (let i = 0; i < playerOneDeck.length || i < playerTwoDeck.length; i++) {
+     if(playerOneDeck.length < 0) {
+       console.log('Player two wins!')
+      //  return ('Player two wins')
+     } else if(playerTwoDeck.length < 0) {
+       console.log('Player one wins')
+      //  return ('Player one wins')
+     } else if(playerOneDeck[i]['value'] > playerTwoDeck[i]['value']) {
+       playerOneDeck.push(playerTwoDeck[i])
+       playerTwoDeck.pop()
+       console.log('Player one pulls ' + playerOneDeck[i]['rank'] + ' of '+ playerOneDeck[i]['suit'] + ' ' + 'Player two pulls ' + playerTwoDeck[i]['rank']+ ' of '+ playerTwoDeck[i]['suit'])
+       console.log('Player one wins the round')
+     } else if(playerOneDeck[i]['value'] < playerTwoDeck[i]['value']) {
+       playerTwoDeck.push(playerOneDeck[i])
+       playerOneDeck.pop()
+       console.log('Player one pulls ' + playerOneDeck[i]['rank'] + ' of '+ playerOneDeck[i]['suit'] + ' ' + 'Player two pulls ' + playerTwoDeck[i]['rank']+ ' of '+ playerTwoDeck[i]['suit'])
+       console.log('Player two wins the round')
+     }
+   }
+  }
+
+
+
+
+
+
