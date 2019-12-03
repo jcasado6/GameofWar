@@ -3,7 +3,7 @@ class Deck {
     this.deck = [];
 
     let suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
-    let values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
+    let values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace']
 
     for (let suit in suits) {
       for (let value in values) {
@@ -44,15 +44,15 @@ console.log(player2)
     if (card1.values > card2.values) {
         console.log("Player 1 wins!");
         player1.push(card1, card2);
-        console.log(player);
+        console.log(player1);
         console.log(player2);
     } else if (card1.values < card2.values) {
         console.log("Player 2 wins!");
-        player1.push(card1, card2);
-        console.log(player);
+        player2.push(card1, card2);
+        console.log(player1);
         console.log(player2);
     } else {
-        console.log ("It's a tie!")
+        console.log ("Its a tie")
     };
 }
 compare()
